@@ -24,7 +24,7 @@ npm run dev
 
 # Üretim için derle
 npm run build
-```
+```    
 
 ## Proje Yapısı
 
