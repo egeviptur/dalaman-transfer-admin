@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-DAs1UGHr.js";var t=e();function n(){return(0,t.jsxs)(`div`,{children:[(0,t.jsx)(`h1`,{className:`text-2xl font-bold text-gray-900 mb-6`,children:`Raporlar`}),(0,t.jsx)(`div`,{className:`bg-white p-8 rounded-xl shadow-sm border border-gray-200 text-center text-gray-500`,children:`Raporlar modülü hazırlanıyor...`})]})}export{n as ReportsPage};
