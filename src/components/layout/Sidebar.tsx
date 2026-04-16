@@ -290,7 +290,6 @@ export function Sidebar() {
               const Icon = item.icon
               const isExpanded = expandedMenu === item.id
               const hasChildren = item.children && item.children.length > 0
-              const isActive = item.path && location.pathname === item.path
 
               return (
                 <div key={item.id} className="mb-0.5">
