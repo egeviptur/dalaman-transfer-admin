@@ -118,9 +118,8 @@ const menuItems: MenuItem[] = [
     label: 'Rezervasyon Yönetimi',
     icon: ClipboardList,
     iconColor: 'text-orange-500',
-    badge: 1,
     children: [
-      { id: 'res-pending', label: 'Bekleyen Rezervasyonlar', path: '/reservations', color: 'default' },
+      { id: 'res-pending', label: 'Bekleyen Rezervasyonlar', path: '/reservations' },
       { id: 'res-completed', label: 'Tamamlanan Rezervasyonlar', path: '/reservations' },
       { id: 'res-cancelled', label: 'İptal Edilen Rezervasyonlar', path: '/reservations' },
     ],
