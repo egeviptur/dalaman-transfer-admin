@@ -11,6 +11,10 @@ interface AppState {
   
   isLoading: boolean
   setIsLoading: (loading: boolean) => void
+  
+  // Yeni: Açık menü durumu (accordion için)
+  expandedMenu: string | null
+  setExpandedMenu: (menuId: string | null) => void
 }
 
 export const useAppStore = create<AppState>()(
@@ -25,10 +29,18 @@ export const useAppStore = create<AppState>()(
       
       isLoading: false,
       setIsLoading: (loading) => set({ isLoading: loading }),
+      
+      // Yeni: Accordion state
+      expandedMenu: null,
+      setExpandedMenu: (menuId) => set({ expandedMenu: menuId }),
     }),
     {
       name: 'app-storage',
-      partialize: (state) => ({ sidebarOpen: state.sidebarOpen, currentSite: state.currentSite }),
+      partialize: (state) => ({ 
+        sidebarOpen: state.sidebarOpen, 
+        currentSite: state.currentSite,
+        expandedMenu: state.expandedMenu,
+      }),
     }
   )
 )
