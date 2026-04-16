@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate, Outlet, useLocation } from 'react-router-dom'
+import { createHashRouter, Navigate, Outlet, useLocation } from 'react-router-dom'
 import { MainLayout } from '../components/layout/MainLayout'
 import { lazy, Suspense } from 'react'
 import { useAuthStore } from '../stores/authStore'
@@ -50,7 +50,7 @@ const PublicRoute = () => {
   return <Outlet />
 }
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/login',
     element: <PublicRoute />,

@@ -346,25 +346,22 @@ export function Sidebar() {
                     <div className="bg-[#0f172a]/50 overflow-hidden transition-all duration-200"
                     >
                       {item.children?.map((child) => (
-                        <NavLink
+                        <button
                           key={child.id}
-                          to={child.path}
                           onClick={() => {
                             if (window.innerWidth < 1024) {
                               setSidebarOpen(false)
                             }
                           }}
-                          className={({ isActive }) =>
-                            cn(
-                              'block px-4 py-2.5 pl-12 text-sm transition-colors hover:bg-gray-700/30',
-                              child.color === 'red' && 'text-red-400 hover:text-red-300',
-                              child.color === 'orange' && 'text-orange-400 hover:text-orange-300',
-                              (!child.color || child.color === 'default') && 'text-gray-400 hover:text-gray-200'
-                            )
-                          }
+                          className={cn(
+                            'w-full text-left block px-4 py-2.5 pl-12 text-sm transition-colors hover:bg-gray-700/30',
+                            child.color === 'red' && 'text-red-400 hover:text-red-300',
+                            child.color === 'orange' && 'text-orange-400 hover:text-orange-300',
+                            (!child.color || child.color === 'default') && 'text-gray-400 hover:text-gray-200'
+                          )}
                         >
                           {child.label}
-                        </NavLink>
+                        </button>
                       ))}
                     </div>
                   )}
